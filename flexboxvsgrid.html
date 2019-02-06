@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="flexgrid.css">
+    <title>Flexbox vs Grid</title>
+
+</head>
+
+<body>
+    <div id="menubg">
+
+    </div>
+    <div id="kropp">
+        <div id="menu">
+            <a id="home" href="#main-header">hem</a>
+            <a id="h1" href="#scale-header">radbrytning</a>
+            <a id="h3" href="#twod-grid-header">2D-grid</a>
+        </div>
+
+        <div id="maingrid">
+
+            <h1 id="main-header">Jämförelse mellan flexbox och grid</h1>
+            <h2 id="content-vs-layout-header">Content-first vs Layout-first</h2>
+            <div id="p-1">flexbox är content-first, alltså layouten beror på innehållet i containern. innehållet som
+                läggs i
+                flex-containern avgör layouten. <br>
+                grid är layout-first, dvs innehållet i en grid-container måste läggas i en redan definierad grid med
+                antal
+                rader och kolumner.</div>
+            <h2 id="oned-vs-twod-header">1D vs 2D</h2>
+            <div id="p-2">
+                flexbox är endimensionell, alltså alla element som placeras i en flexbox-container hamnar på en och
+                samma rad
+                som bara fylls på. grid är däremot tvådimensionell vilket gör att man kan skapa layouter där man
+                placerar
+                element där man vill ha dem sett till höjd och bredd.
+            </div>
+
+            <h2 id="scale-header">Skillnad mellan grid och flex i scaling (ändra bredd på browsern för att se)</h2>
+            <div class="grid">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+                <div>5</div>
+                <div>6</div>
+                <div>7</div>
+                <div>8</div>
+                <div>9</div>
+            </div>
+            <br><br>
+            <div class="flex">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+                <div>5</div>
+                <div>6</div>
+                <div>7</div>
+                <div>8</div>
+                <div>9</div>
+            </div>
+            <br><br>
+            <div class="flexgrid">
+                <header>
+                    <div id="first">1</div>
+                    <div id="second">2</div>
+                    <div id="third">3</div>
+                    <div>4</div>
+                    <div>5</div>
+                    <div>6</div>
+                    <div>7</div>
+                    <div>8</div>
+                    <div>9</div>
+                </header>
+            </div>
+
+            <h2 id="twod-grid-header">Enkel 2D-layout som går att genomföra med endast en grid men inte flex</h2>
+
+            <div class="knasgrid" id="twod-grid-exempel">
+                <footer>
+                    si señor footer here
+                </footer>
+                <aside>
+                    <p>sidcontentpåsidan</p>
+                </aside>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/b/b7/Owen_Wilson_Cannes_2011_%28cropped%29.jpg"
+                    alt="här skare va en bild">
+                <header>zlatan nickar med huvet i fotboll</header>
+            </div>
+        </div>
+
+
+    </div>
+    <script>alert("det blev tyvärr ingen javascript med en sånhär meny");
+        console.log("röd alört")</script>
+</body>
+
+
+</html>

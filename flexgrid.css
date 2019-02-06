@@ -1,0 +1,264 @@
+
+
+
+
+html, body{
+    background-color:gray;
+}
+
+
+
+#menubg{
+    display: block;
+    background-color: black;
+    height:25px;
+    width: 100%;
+    position:fixed;
+    
+    
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    padding-top: 25px;
+    margin-top: -15px;
+    align-self: end;
+}
+
+#menu {
+    display: flex;
+        margin-left: 10px;
+    position: fixed;
+    background-color:black;
+    height: 25px;
+    width: 100%;
+    flex-wrap: nowrap;
+}
+
+#menu a{
+    padding: 0px 10px;
+    word-break:keep-all;
+    color:white;
+}
+
+#menu a:hover{
+    background-color:rgb(75, 168, 172);
+    text-decoration: none;
+}
+
+#kropp{
+    max-width:960px;
+    margin:auto;
+}
+
+#maingrid {
+    display:grid;
+    /*grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto auto;*/
+    background-color: gray;
+    grid-gap: 5px;
+    padding: 10px;
+    padding-top: 0;
+    
+
+    grid: [row1-start] "mh mh" auto [row1-end]
+          [row2-start] "con-vs-lay oned-vs-twod-h" auto [row1-end]
+          [row3-start] "p1 p2" auto [row3-end]
+          [row4-start] "sc-h sc-h" auto[row4-end]
+          [row5-start] "grid flex" auto [row5-end]
+          [row6-start] "twod-h twod-h" auto [row6-end]
+          [row7-start] "twod-g twod-g" auto [row7-end]
+          / 1fr 1fr;
+    
+}
+
+
+
+#maingrid div{
+    border: 3px solid black;
+    background-color: white;
+    padding: 5px;
+}
+
+#main-header{
+    padding-top:25px;
+    margin-top:0px;
+    grid-area: mh
+}
+
+#content-vs-layout-header{
+    grid-area:con-vs-lay;
+}
+
+#p-1 {
+    /*grid-column: 1/2;
+    grid-row: 1/2;*/
+    grid-area: p1
+}
+
+#oned-vs-twod-header{
+    grid-area: oned-vs-twod-h
+}
+
+#p-2{
+    /*grid-column:2/3;
+    grid-row:1/2;*/
+    grid-area: p2
+}
+
+#scale-header{
+    
+    /*grid-column: 1/span 2;
+    grid-row:2/ span 1;*/
+    grid-area: sc-h
+}
+
+#twod-grid-header {
+    grid-area: twod-h;
+}
+
+#twod-grid-exempel{
+    grid-area: twod-g;
+}
+
+.grid{
+    display: grid;   
+    grid-template-columns: repeat(auto-fill, minmax(45px, 1fr));
+  grid-template-rows: 50px 50px 50px;
+  
+  grid-row-gap: 4px;
+  grid-column-gap: 9px;
+  border-radius: 5px;
+  color: purple;
+  justify-items: stretch;
+  justify-content: stretch;
+  
+  grid-area:grid;
+
+  /*grid-row: 3/ span 1;
+  grid-column: 1/ span 1;*/
+}
+.grid div{
+    border: solid black 2px;
+    
+    border-radius: 5px;
+    text-align: center;
+    
+    
+    
+}
+
+
+.flex{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    grid-area:flex;
+    /*grid-row: 3/span 1;*/
+}
+.flex div{
+    flex-grow: 1;
+    margin: 2.5px;
+    min-width: 50px;
+    border: solid black 2px;
+    text-align: center;
+    justify-items: center;
+    border-radius: 5px;
+    
+}
+.flexgrid{
+    display: none;
+    grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 50px 50px;
+   grid-column-gap: 10px;
+  grid-row-gap: 2px;
+  border-radius: 5px;
+}
+.flexgrid div{
+    border: solid black 2px;
+    margin: 0;
+    padding:2px;
+    padding-top: 10px;
+    border-radius: 5px;
+    text-align: center; 
+    /*display: inline-block;*/  
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+    grid-column: 3/12;
+}
+
+header div:nth-child(3){
+    margin-left:auto;
+}
+
+
+
+.knasgrid{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 50px 400px 50px;
+}
+
+.knasgrid footer{
+    grid-column: span 12;
+    background-color: aqua;
+    
+}
+
+.knasgrid aside{ 
+    grid-column: span 2;
+    background-color: yellowgreen;
+    word-break: break-all;
+}
+
+.knasgrid img{
+    grid-column: span 10;
+    grid-row: span 1;
+    background-color: gray;
+    height: 100%;
+    width: 100%;
+    
+}
+
+.knasgrid header{
+    grid-column: span 12;
+    background-color: hotpink;
+}
+
+@media (max-width: 500px){
+    body{
+        background-color: hotpink;
+    }
+
+    #maingrid{
+        grid: [row1-start] "mh" auto [row1-end]
+          [row2-start] "con-vs-lay" auto [row2-end]
+          [row3-start] "p1" auto [row3-end]
+          [row4-start] "oned-vs-twod-h" auto[row4-end]
+          [row5-start] "p2" auto[row5-end]
+          [row6-start] "sc-h" auto[row6-end]
+          [row7-start] "grid" auto [row7-end]
+          [row8-start] "flex" auto [row8-end]
+          [row9-start] "twod-h" auto [row9-end]
+          [row10-start] "twod-g" auto [row10-end]
+          / auto;
+
+          
+
+          background-color: hotpink;
+    }
+.grid{
+    grid-template-rows: 50px 50px;
+
+}
+    
+    .knasgrid img{
+        display:none;
+    }
+}
